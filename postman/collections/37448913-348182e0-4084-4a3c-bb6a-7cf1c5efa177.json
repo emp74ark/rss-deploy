@@ -631,7 +631,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /feed/refresh",
+					"name": "Refresh feeds",
 					"id": "37448913-fe5da157-b540-4d01-92fe-9f30270c3556",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
