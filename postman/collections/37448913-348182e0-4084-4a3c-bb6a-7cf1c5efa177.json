@@ -72,7 +72,7 @@
 					"response": []
 				},
 				{
-					"name": "POST /auth/signup",
+					"name": "SignUp",
 					"id": "37448913-baa58856-5cd2-4ae9-851a-6a8cd5f7b4fe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -103,7 +103,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /auth/logout",
+					"name": "LogOut",
 					"id": "37448913-aff9244e-40ba-4ec5-8bdb-bbd3a165760b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
