@@ -1056,7 +1056,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /stats/:id",
+					"name": "Get stat record by ID",
 					"id": "37448913-01e46fb7-6a46-42e3-bf27-fa325caf1ad6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
