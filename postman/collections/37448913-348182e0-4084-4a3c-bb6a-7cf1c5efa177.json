@@ -953,7 +953,7 @@
 					"response": []
 				},
 				{
-					"name": "DELETE /article/:articleId",
+					"name": "Delete article",
 					"id": "37448913-4bc23fd2-01bf-473b-9101-3a710ef79bd9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
