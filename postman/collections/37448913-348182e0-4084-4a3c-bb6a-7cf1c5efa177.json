@@ -10,6 +10,27 @@
 			"item": [
 				{
 					"name": "Health",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "36e55251-17f8-42c4-95d8-1f338309bce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const mockResponse = {",
+									"  status: \"active\",",
+									"  version: \"0.0.3\",",
+									"  uptime: \"0d 0h 32m 48s\"",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "37448913-fca90cdd-3a40-45ad-b966-211e092d218d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
