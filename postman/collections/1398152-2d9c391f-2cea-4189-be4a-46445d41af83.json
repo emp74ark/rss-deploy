@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "1398152-2d9c391f-2cea-4189-be4a-46445d41af83",
+		"name": "test collection mumi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test request",
+			"id": "1398152-6009c248-ea73-4d2b-af18-91478748e54b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "test request",
+					"host": [
+						"test request"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
