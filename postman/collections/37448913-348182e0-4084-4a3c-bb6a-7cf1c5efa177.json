@@ -454,7 +454,7 @@
 					"response": []
 				},
 				{
-					"name": "PATCH /tag/:tagName",
+					"name": "Change tag",
 					"id": "37448913-174c6a2e-a0d3-42d3-afe8-5eb2d8bb6184",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
