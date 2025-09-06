@@ -41,7 +41,7 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "Login",
+					"name": "Log in",
 					"id": "37448913-594b2761-fedd-49ce-8164-3b5657c9ac0b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -72,7 +72,7 @@
 					"response": []
 				},
 				{
-					"name": "SignUp",
+					"name": "Sign up",
 					"id": "37448913-baa58856-5cd2-4ae9-851a-6a8cd5f7b4fe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
