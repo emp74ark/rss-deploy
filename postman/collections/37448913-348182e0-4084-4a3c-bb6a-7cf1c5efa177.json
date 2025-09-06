@@ -1029,7 +1029,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /stats/all",
+					"name": "Get all stat records",
 					"id": "37448913-7b756a76-93da-4ca2-9b3a-1c24c64114eb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
