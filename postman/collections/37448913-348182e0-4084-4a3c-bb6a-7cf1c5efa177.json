@@ -299,7 +299,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "Delete user",
 					"id": "37448913-ee21dd95-d376-4b43-b559-8b35b1113f60",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -332,7 +332,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete orphaned",
+					"name": "Delete orphaned users",
 					"id": "37448913-c977de5b-e05d-4d6d-a9bd-62fa9d8c5827",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
