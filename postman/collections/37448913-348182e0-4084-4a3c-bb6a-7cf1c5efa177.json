@@ -852,7 +852,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /article/:articleId/full",
+					"name": "Get article full text by ID",
 					"id": "37448913-d85be6e5-bdcb-4ca7-9fae-20225cca28d9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
