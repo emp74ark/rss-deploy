@@ -729,7 +729,7 @@
 					"response": []
 				},
 				{
-					"name": "DELETE /feed/:feedId",
+					"name": "Delete feed",
 					"id": "37448913-8094a853-cea6-4576-97c7-2b16287f42f2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
