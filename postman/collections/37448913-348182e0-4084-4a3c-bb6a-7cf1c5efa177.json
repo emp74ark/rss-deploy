@@ -560,7 +560,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /feed",
+					"name": "Get feeds",
 					"id": "37448913-48157b83-fabf-4c24-9c02-04f9c5f8ecaf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
