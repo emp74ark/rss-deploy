@@ -658,7 +658,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /feed/:feedId/refresh",
+					"name": "Refresh feed by ID",
 					"id": "37448913-499af7e3-f405-40fe-a9c5-fe61249617d1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -692,7 +692,7 @@
 					"response": []
 				},
 				{
-					"name": "PATCH /feed/:feedId",
+					"name": "Change feed",
 					"id": "37448913-820f3871-07ba-48a4-8953-445538f9f16c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
