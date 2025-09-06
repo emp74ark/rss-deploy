@@ -491,7 +491,7 @@
 					"response": []
 				},
 				{
-					"name": "DELETE /tag/:tagName",
+					"name": "Delete tag",
 					"id": "37448913-99b9ae87-3c51-48e3-ab2f-1f135b395ef5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -530,7 +530,7 @@
 			"name": "Feed",
 			"item": [
 				{
-					"name": "POST /feed",
+					"name": "Create feed",
 					"id": "37448913-8bd454ea-1e1b-476a-9a13-17a6ec55898b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
