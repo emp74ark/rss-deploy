@@ -1083,7 +1083,7 @@
 					"response": []
 				},
 				{
-					"name": "DELETE /stats/:id",
+					"name": "Delete stats record",
 					"id": "37448913-2548cc0c-4df0-4c95-b64d-2bc4736b4e61",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
