@@ -229,7 +229,7 @@
 					"response": []
 				},
 				{
-					"name": "Get one",
+					"name": "Get user by ID",
 					"id": "37448913-e4d37c54-4044-4323-8e82-8c5b0a9dd572",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -262,7 +262,7 @@
 					"response": []
 				},
 				{
-					"name": "Change",
+					"name": "Change user",
 					"id": "37448913-8990fd15-67ce-43a9-8712-ebda1194ab2b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
