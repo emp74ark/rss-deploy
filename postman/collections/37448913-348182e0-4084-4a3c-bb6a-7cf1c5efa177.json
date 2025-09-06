@@ -136,7 +136,7 @@
 			"name": "User",
 			"item": [
 				{
-					"name": "POST /user",
+					"name": "Create user",
 					"id": "37448913-2f343224-8d53-4b0d-ac39-6c67d70c863a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
