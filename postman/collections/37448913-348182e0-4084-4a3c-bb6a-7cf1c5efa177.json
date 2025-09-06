@@ -598,7 +598,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /feed/:feedId",
+					"name": "Get feed by ID",
 					"id": "37448913-79eee582-924f-4b0c-ba61-d13ef9b9af15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
