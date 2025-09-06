@@ -9,7 +9,7 @@
 			"name": "Root",
 			"item": [
 				{
-					"name": "Helath",
+					"name": "Health",
 					"id": "37448913-fca90cdd-3a40-45ad-b966-211e092d218d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -41,7 +41,7 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "POST /auth/login",
+					"name": "Login",
 					"id": "37448913-594b2761-fedd-49ce-8164-3b5657c9ac0b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
