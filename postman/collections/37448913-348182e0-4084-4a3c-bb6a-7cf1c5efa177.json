@@ -992,7 +992,7 @@
 			"name": "Stats",
 			"item": [
 				{
-					"name": "GET /stats/new",
+					"name": "Create new stat record",
 					"id": "37448913-ae2e5a93-9b97-40d2-afde-f40011e8bc8f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
