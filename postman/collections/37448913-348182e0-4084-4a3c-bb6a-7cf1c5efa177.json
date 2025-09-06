@@ -395,7 +395,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /tag",
+					"name": "Get tags",
 					"id": "37448913-97aee95f-dd58-4915-95b3-8bae8a0682ef",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -421,7 +421,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /tag/:tagId",
+					"name": "Get tag by ID",
 					"id": "37448913-dbe8738e-4881-4d08-a1c3-6dc3e169bc85",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
