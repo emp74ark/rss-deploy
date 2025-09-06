@@ -166,7 +166,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /user",
+					"name": "Get user",
 					"id": "37448913-c8064d26-9ae1-4d7c-a636-982bcf77c798",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
