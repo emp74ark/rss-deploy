@@ -166,7 +166,7 @@
 					"response": []
 				},
 				{
-					"name": "Get user",
+					"name": "Get users",
 					"id": "37448913-c8064d26-9ae1-4d7c-a636-982bcf77c798",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -202,7 +202,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /user/self",
+					"name": "Get self",
 					"id": "37448913-266f2c22-702b-420b-8ad2-29d788f0da7f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
