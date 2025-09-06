@@ -9,7 +9,7 @@
 			"name": "Root",
 			"item": [
 				{
-					"name": "GET /health",
+					"name": "Helath",
 					"id": "37448913-fca90cdd-3a40-45ad-b966-211e092d218d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
