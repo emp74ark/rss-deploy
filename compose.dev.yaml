@@ -1,0 +1,52 @@
+services:
+  db:
+    image: mongo:latest
+    container_name: rss-db
+    restart: always
+    networks:
+      - rss-inner
+    volumes:
+      - db-data:/data/db
+
+  nest:
+    image: ghcr.io/emp74ark/rss-nest:dev
+    container_name: rss-nest
+    restart: always
+    volumes:
+      - /app
+      - /app/node_modules
+    networks:
+      - rss-inner
+    depends_on:
+      - db
+
+  angular:
+    image: ghcr.io/emp74ark/rss-angular:dev
+    container_name: rss-angular
+    restart: always
+    networks:
+      - rss-outer
+      - rss-inner
+    ports:
+      - "80:80"
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - nest
+
+volumes:
+  db-data:
+    driver: local
+  backend-data:
+    driver: local
+  caddy_data:
+  caddy_config:
+
+networks:
+  rss-inner:
+    driver: bridge
+  rss-outer:
+    driver: bridge

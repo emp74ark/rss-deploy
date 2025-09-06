@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mongo:latest
+    container_name: rss-db
+    restart: always
+    ports:
+      - "27020:27017"
+    volumes:
+      - db-data:/data/db
+
+  nest:
+    build:
+      context: ../rss-nest
+      dockerfile: Dockerfile.local
+    container_name: rss-nest
+    restart: always
+    command: sh -c "cd /app/ && sh puppeteer.sh && npm install && npm run start:dev"
+    volumes:
+      - ../rss-nest:/app
+      - ../rss-nest/node_modules:/app/node_modules
+    ports:
+      - "3600:3600"
+    depends_on:
+      - db
+
+volumes:
+  db-data:
+    driver: local
+  nest-data:
+    driver: local
