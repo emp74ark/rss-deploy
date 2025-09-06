@@ -886,7 +886,7 @@
 					"response": []
 				},
 				{
-					"name": "PATCH /article (bulk update)",
+					"name": "Change articles (bulk)",
 					"id": "37448913-147daf5b-b767-41bd-9596-482ce43996bc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -916,7 +916,7 @@
 					"response": []
 				},
 				{
-					"name": "PATCH /article/:articleId",
+					"name": "Change article",
 					"id": "37448913-b936dad2-ad8c-4ee7-a4e1-c34e57685afb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
