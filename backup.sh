@@ -37,7 +37,7 @@ echo -e "${BLUE}Attempting to create DB backup...${NC}"
 
 docker exec -it "$DB_CONTAINER" rm -rf /db || { echo -e "${RED}Error: Failed to clear '/db' in ${DB_CONTAINER} container.${NC}"; exit 1; }
 
-docker exec -it "$DB_CONTAINER" mongodump --db="DB_NAME" --out=db || { echo -e "${RED}Error: Failed to execute mongodump in ${DB_CONTAINER} container.${NC}"; exit 1; }
+docker exec -it "$DB_CONTAINER" mongodump --db="$DB_NAME" --out=db || { echo -e "${RED}Error: Failed to execute mongodump in ${DB_CONTAINER} container.${NC}"; exit 1; }
 
 docker cp "$DB_CONTAINER":/db . || { echo -e "${RED}Error: Failed to copy database backup from db container.${NC}"; exit 1; }
 
