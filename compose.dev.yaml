@@ -1,32 +1,32 @@
 services:
   db:
     image: mongo:latest
-    container_name: rss-db
+    container_name: feedz-db
     restart: always
     networks:
-      - rss-inner
+      - feedz-inner
     volumes:
       - db-data:/data/db
 
-  nest:
+  api:
     image: ghcr.io/emp74ark/rss-nest:dev
-    container_name: rss-nest
+    container_name: feedz-api
     restart: always
     volumes:
       - /app
       - /app/node_modules
     networks:
-      - rss-inner
+      - feedz-inner
     depends_on:
       - db
 
-  angular:
+  web:
     image: ghcr.io/emp74ark/rss-angular:dev
-    container_name: rss-angular
+    container_name: feedz-web
     restart: always
     networks:
-      - rss-outer
-      - rss-inner
+      - feedz-outer
+      - feedz-inner
     ports:
       - "80:80"
       - "443:443/tcp"
@@ -35,18 +35,16 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
-      - nest
+      - api
 
 volumes:
   db-data:
-    driver: local
-  backend-data:
     driver: local
   caddy_data:
   caddy_config:
 
 networks:
-  rss-inner:
+  feedz-inner:
     driver: bridge
-  rss-outer:
+  feedz-outer:
     driver: bridge

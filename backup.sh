@@ -7,6 +7,9 @@ BLUE='\e[34m'
 CYAN='\e[36m'
 NC='\e[0m'
 
+DB_CONTAINER="feedz-db"
+DB_NAME="rss"
+
 if [ "$1" ]; then
   BACKUP_ROOT_FOLDER="$1"
 else
@@ -32,10 +35,10 @@ cd "$CURRENT_BACKUP_TIMESTAMP" || { echo -e "${RED}Error: Failed to navigate int
 
 echo -e "${BLUE}Attempting to create DB backup...${NC}"
 
-docker exec -it rss-db rm -rf /db || { echo -e "${RED}Error: Failed to clear '/db' in rss-db container.${NC}"; exit 1; }
+docker exec -it "$DB_CONTAINER" rm -rf /db || { echo -e "${RED}Error: Failed to clear '/db' in ${DB_CONTAINER} container.${NC}"; exit 1; }
 
-docker exec -it rss-db mongodump --db=rss --out=db || { echo -e "${RED}Error: Failed to execute mongodump in rss-db container.${NC}"; exit 1; }
+docker exec -it "$DB_CONTAINER" mongodump --db="DB_NAME" --out=db || { echo -e "${RED}Error: Failed to execute mongodump in ${DB_CONTAINER} container.${NC}"; exit 1; }
 
-docker cp rss-db:/db . || { echo -e "${RED}Error: Failed to copy database backup from rss-db container.${NC}"; exit 1; }
+docker cp "$DB_CONTAINER":/db . || { echo -e "${RED}Error: Failed to copy database backup from db container.${NC}"; exit 1; }
 
 echo -e "${GREEN}DB backup done! Backup saved to: $(pwd)${NC}"
