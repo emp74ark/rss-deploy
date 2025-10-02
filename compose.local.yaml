@@ -1,23 +1,23 @@
 services:
   db:
     image: mongo:latest
-    container_name: rss-db
-    restart: always
+    container_name: feedz-db
+    restart: unless-stopped
     ports:
       - "27020:27017"
     volumes:
       - db-data:/data/db
 
-  nest:
+  api:
     build:
-      context: ../rss-nest
+      context: ../api
       dockerfile: Dockerfile.local
-    container_name: rss-nest
-    restart: always
+    container_name: feedz-api
+    restart: unless-stopped
     command: sh -c "cd /app/ && sh puppeteer.sh && npm install && npm run start:dev"
     volumes:
-      - ../rss-nest:/app
-      - ../rss-nest/node_modules:/app/node_modules
+      - ../api:/app
+      - ../api/node_modules:/app/node_modules
     ports:
       - "3600:3600"
     depends_on:
@@ -25,6 +25,4 @@ services:
 
 volumes:
   db-data:
-    driver: local
-  nest-data:
     driver: local
