@@ -6,7 +6,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 300mb
+          memory: 250mb
     networks:
       - feedz-inner
     volumes:
@@ -19,7 +19,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 300mb
+          memory: 400mb
           cpus: '0.5'
     volumes:
       - /app

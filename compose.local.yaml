@@ -3,6 +3,11 @@ services:
     image: mongo:latest
     container_name: feedz-db
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 300mb
+          cpus: '0.3'
     ports:
       - "27020:27017"
     volumes:
@@ -14,6 +19,11 @@ services:
       dockerfile: Dockerfile.local
     container_name: feedz-api
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 300mb
+          cpus: '0.3'
     command: sh -c "cd /app/ && sh puppeteer.sh && npm install && npm run start:dev"
     volumes:
       - ../api:/app
