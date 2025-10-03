@@ -3,7 +3,10 @@ services:
     image: mongo:latest
     container_name: feedz-db
     restart: always
-    mem_limit: 300mb
+    deploy:
+      resources:
+        limits:
+          memory: 300mb
     networks:
       - feedz-inner
     volumes:
@@ -13,8 +16,11 @@ services:
     image: ghcr.io/emp74ark/rss-nest:dev
     container_name: feedz-api
     restart: always
-    mem_limit: 300mb
-    cpu_percent: 30
+    deploy:
+      resources:
+        limits:
+          memory: 300mb
+          cpus: '0.5'
     volumes:
       - /app
       - /app/node_modules
@@ -27,7 +33,10 @@ services:
     image: ghcr.io/emp74ark/rss-angular:dev
     container_name: feedz-web
     restart: always
-    mem_limit: 64mb
+    deploy:
+      resources:
+        limits:
+          memory: 300mb
     networks:
       - feedz-outer
       - feedz-inner
