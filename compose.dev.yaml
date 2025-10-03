@@ -14,6 +14,7 @@ services:
     container_name: feedz-api
     restart: always
     mem_limit: 300mb
+    cpu_percent: 30
     volumes:
       - /app
       - /app/node_modules
