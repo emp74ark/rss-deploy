@@ -28,11 +28,9 @@ services:
 
   web:
     image: ghcr.io/emp74ark/rss-angular:dev
-#    container_name: feedz-web
+    container_name: feedz-web
     restart: always
     deploy:
-      mode: replicated
-      replicas: 2
       resources:
         limits:
           memory: 100mb
