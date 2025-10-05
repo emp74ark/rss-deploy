@@ -1,0 +1,10 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: feedz-db
+    restart: unless-stopped
+    volumes:
+      - db-data:/data/db
+volumes:
+  db-data:
+    driver: local

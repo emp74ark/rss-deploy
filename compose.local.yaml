@@ -1,37 +1,26 @@
+name: feedz
 services:
   db:
-    image: mongo:latest
-    container_name: feedz-db
+    extends:
+      file: compose.db.yaml
+      service: mongo
     restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          memory: 300mb
-          cpus: '0.3'
     ports:
       - "27020:27017"
-    volumes:
-      - db-data:/data/db
 
   api:
+    extends:
+      file: compose.api.yaml
+      service: nestjs
     build:
       context: ../api
       dockerfile: Dockerfile.local
-    container_name: feedz-api
-    restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          memory: 300mb
-          cpus: '0.3'
     command: sh -c "cd /app/ && sh puppeteer.sh && npm install && npm run start:dev"
     volumes:
       - ../api:/app
       - ../api/node_modules:/app/node_modules
     ports:
       - "3600:3600"
-    depends_on:
-      - db
 
 volumes:
   db-data:

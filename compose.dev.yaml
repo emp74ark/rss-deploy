@@ -1,42 +1,41 @@
+name: feedz
 services:
   db:
-    image: mongo:latest
-    container_name: feedz-db
-    restart: always
+    extends:
+      file: compose.db.yaml
+      service: mongo
+    networks:
+      - feedz-inner
     deploy:
       resources:
         limits:
           memory: 250mb
-    networks:
-      - feedz-inner
-    volumes:
-      - db-data:/data/db
+    restart: always
 
   api:
+    extends:
+      file: compose.api.yaml
+      service: nestjs
     image: ghcr.io/emp74ark/rss-nest:dev
-    container_name: feedz-api
     restart: always
+    networks:
+      - feedz-inner
     deploy:
       resources:
         limits:
           memory: 400mb
           cpus: '0.5'
-    volumes:
-      - /app
-      - /app/node_modules
-    networks:
-      - feedz-inner
-    depends_on:
-      - db
 
   web:
     image: ghcr.io/emp74ark/rss-angular:dev
-    container_name: feedz-web
+#    container_name: feedz-web
     restart: always
     deploy:
+      mode: replicated
+      replicas: 2
       resources:
         limits:
-          memory: 300mb
+          memory: 100mb
     networks:
       - feedz-outer
       - feedz-inner
@@ -51,8 +50,6 @@ services:
       - api
 
 volumes:
-  db-data:
-    driver: local
   caddy_data:
   caddy_config:
 

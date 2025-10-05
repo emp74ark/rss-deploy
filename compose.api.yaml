@@ -1,0 +1,9 @@
+services:
+  nestjs:
+    container_name: feedz-api
+    restart: unless-stopped
+    volumes:
+      - /app
+      - /app/node_modules
+    depends_on:
+      - db

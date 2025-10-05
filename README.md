@@ -28,7 +28,7 @@ Clone the following repositories:
 Keep the folders with these repositories at the same file system level.
 
 ```shell
-docker compose -p rss -f compose.local.yaml up -d
+docker compose -f compose.local.yaml up -d
 ```
 
 Application environment variables for the backend should be stored in a `.env` file. Check
