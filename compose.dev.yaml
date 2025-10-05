@@ -50,6 +50,8 @@ services:
       - api
 
 volumes:
+  db-data:
+    driver: local
   caddy_data:
   caddy_config:
 
