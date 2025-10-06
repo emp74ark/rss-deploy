@@ -15,12 +15,24 @@ services:
     build:
       context: ../api
       dockerfile: Dockerfile.local
-    command: sh -c "cd /app/ && sh puppeteer.sh && npm install && npm run start:dev"
+    command: sh -c "cd /app/ && npm install && npm run start:dev"
     volumes:
       - ../api:/app
       - ../api/node_modules:/app/node_modules
     ports:
       - "3600:3600"
+
+  crawler:
+    extends:
+      file: compose.crawler.yaml
+      service: puppeteer
+    build:
+      context: ../crawler
+      dockerfile: Dockerfile.local
+    command: sh -c "cd /app/  && sh puppeteer.sh && pnpm install && pnpm run start:dev"
+    volumes:
+      - ../crawler:/app
+      - ../crawler/node_modules:/app/node_modules
 
 volumes:
   db-data:

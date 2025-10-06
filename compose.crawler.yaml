@@ -1,10 +1,8 @@
 services:
-  nestjs:
-    container_name: feedz-api
+  puppeteer:
+    container_name: feedz-crawler
     restart: unless-stopped
     volumes:
       - /app
       - /app/node_modules
-    depends_on:
-      - db
-      - crawler
+

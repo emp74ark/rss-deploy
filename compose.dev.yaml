@@ -23,7 +23,19 @@ services:
     deploy:
       resources:
         limits:
-          memory: 400mb
+          memory: 200mb
+          cpus: '0.5'
+
+  crawler:
+    extends:
+      file: compose.crawler.yaml
+      service: puppeteer
+    image: ghcr.io/emp74ark/rss-crawler:dev
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 200mb
           cpus: '0.5'
 
   web:
