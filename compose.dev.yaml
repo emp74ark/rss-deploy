@@ -23,8 +23,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 200mb
-          cpus: '0.5'
+          memory: 120mb
+          cpus: '0.3'
 
   crawler:
     extends:
@@ -37,7 +37,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 200mb
+          memory: 300mb
           cpus: '0.5'
 
   web:
@@ -47,7 +47,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 100mb
+          memory: 80mb
     networks:
       - feedz-outer
       - feedz-inner
